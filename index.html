@@ -126,7 +126,10 @@ const arButton=ARButton.createButton(renderer,{
  requiredFeatures:['hit-test'],optionalFeatures:['dom-overlay'],
  domOverlay:{root:document.body}
 });
-arButton.style.setProperty('display','none','important');arButton.setAttribute('aria-hidden','true');document.body.appendChild(arButton);
+// Three.js 기본 AR 버튼은 DOM에 추가하지 않습니다.
+// 숨겨진 버튼의 클릭 기능만 MR 시작 버튼에서 호출합니다.
+// 따라서 START AR / STOP AR / AR NOT SUPPORTED 중복 표시가 발생하지 않습니다.
+arButton.setAttribute('aria-hidden','true');
 stop.onclick=async()=>{const s=renderer.xr.getSession();if(s)await s.end();};
 if(!navigator.xr){unsupported.style.display='inline-block';}
 if(navigator.xr){

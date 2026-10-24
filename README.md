@@ -37,3 +37,7 @@ https://ilmac-knu.github.io/statue-liberty-mr-illusion/
 [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 Three.js 및 WebXR 사용. 원본 3D 모델의 저작자 표시를 유지하세요.
+
+## v5 화면 정리
+
+Three.js 기본 AR 버튼을 페이지에 표시하지 않고 MR 전용 버튼만 사용합니다. 노트북에서는 `MR NOT SUPPORTED`, 지원 스마트폰에서는 `MR 시작`과 `STOP MR`이 나타납니다.
